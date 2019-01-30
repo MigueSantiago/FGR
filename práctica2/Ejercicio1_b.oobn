@@ -1,0 +1,251 @@
+class Ejercicio1_b
+{
+    inputs = ();
+    outputs = ();
+    node_size = (80 40);
+    HR_TextLabel_IDs = "1,2,3,4,5";
+    HR_TextLabel_5_Size = "108,57";
+    HR_TextLabel_5_Position = "965,300";
+    HR_TextLabel_5_Description = "Salvaguardas\nMitigadoras";
+    HR_TextLabel_4_Size = "100,50";
+    HR_TextLabel_4_Position = "967,-2";
+    HR_TextLabel_4_Description = "Salvaguardas\nPreventivas";
+    HR_TextLabel_3_Size = "100,50";
+    HR_TextLabel_3_Position = "24,89";
+    HR_TextLabel_3_Description = "Disparador";
+    HR_TextLabel_2_Size = "100,50";
+    HR_TextLabel_2_Position = "32,246";
+    HR_TextLabel_2_Description = "Amenazas";
+    HR_TextLabel_1_Size = "100,45";
+    HR_TextLabel_1_Position = "47,406";
+    HR_TextLabel_1_Description = "Activos";
+    HR_DBN_Num_Slices = "5";
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Utility_Link = "63";
+    HR_Probabilistic_Link = "63";
+    HR_Functional_Link = "63";
+    HR_Binding_Link = "63";
+    HR_Information_Arc = "63";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Dialog,name=Dialog,style=bold,size=12]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node Airbag
+    {
+	label = "";
+	position = (622 319);
+	states = ("SaltaAirbag" "NoSaltaAirbag");
+	HR_LinkGroup = "[Heridas:0]";
+	HR_LinkMode = "[Heridas:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node aviso_nieve
+    {
+	label = "";
+	position = (594 20);
+	states = ("Si" "No");
+	HR_LinkGroup = "[ClimatologiaAdversa:0]";
+	HR_LinkMode = "[mal_climatologia:0]";
+	HR_NodeSize = "(164, 40)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Uso_cadenas
+    {
+	label = "";
+	position = (813 24);
+	states = ("Si" "No");
+	HR_LinkControlPoints = "";
+	HR_LinkGroup = "[ClimatologiaAdversa:0]";
+	HR_LinkMode = "[mal_climatologia:0]";
+	HR_NodeSize = "(160, 38)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node ClimatologiaAdversa
+    {
+	label = "";
+	position = (484 110);
+	states = ("Si" "No");
+	HR_LinkControlPoints = "";
+	HR_LinkGroup = "[Accidente:0]";
+	HR_LinkMode = "[Accidente:0]";
+	HR_NodeSize = "(149, 40)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node AvisosVelocidad
+    {
+	label = "";
+	position = (326 23);
+	states = ("Si" "No");
+	HR_LinkGroup = "[ConduccionRapida:0]";
+	HR_LinkMode = "[ConduccionRapida:0]";
+	HR_NodeSize = "(138, 45)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node CinturonSeguridad
+    {
+	label = "";
+	position = (433 320);
+	states = ("Si" "No");
+	HR_LinkGroup = "[Heridas:0]";
+	HR_LinkMode = "[Heridas:0]";
+	HR_NodeSize = "(154, 47)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node ConduccionRapida
+    {
+	label = "";
+	position = (250 110);
+	states = ("Si" "No");
+	HR_LinkGroup = "[Accidente:0]";
+	HR_LinkMode = "[Accidente:0]";
+	HR_NodeSize = "(149, 36)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Accidente
+    {
+	label = "";
+	position = (252 264);
+	states = ("Si" "No");
+	HR_LinkGroup = "[Heridas:0]";
+	HR_LinkMode = "[Heridas:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Heridas
+    {
+	label = "";
+	position = (252 423);
+	states = ("SinHeridas" "HeridasLeves" "HeridasGraves");
+	HR_State_2 = "";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    potential (Airbag)
+    {
+	data = ( 0.95 0.05 );
+    }
+
+    potential (aviso_nieve)
+    {
+	data = ( 0.2 0.8 );
+    }
+
+    potential (Uso_cadenas)
+    {
+	data = ( 0.15 0.85 );
+    }
+
+    potential (ClimatologiaAdversa | Uso_cadenas aviso_nieve)
+    {
+	data = ((( 0.2 0.8 )	%  Uso_cadenas=Si  aviso_nieve=Si
+		 ( 0.3 0.7 ))	%  Uso_cadenas=Si  aviso_nieve=No
+		(( 0.4 0.6 )	%  Uso_cadenas=No  aviso_nieve=Si
+		 ( 0.8 0.2 )));	%  Uso_cadenas=No  aviso_nieve=No
+    }
+
+    potential (AvisosVelocidad)
+    {
+	data = ( 0.4 0.6 );
+    }
+
+    potential (CinturonSeguridad)
+    {
+	data = ( 0.772 0.228 );
+    }
+
+    potential (ConduccionRapida | AvisosVelocidad)
+    {
+	data = (( 0.1 0.9 )	%  AvisosVelocidad=Si
+		( 0.3 0.7 ));	%  AvisosVelocidad=No
+    }
+
+    potential (Accidente | ClimatologiaAdversa ConduccionRapida)
+    {
+	data = ((( 0.7 0.3 )	%  ClimatologiaAdversa=Si  ConduccionRapida=Si
+		 ( 0.2 0.8 ))	%  ClimatologiaAdversa=Si  ConduccionRapida=No
+		(( 0.35 0.65 )	%  ClimatologiaAdversa=No  ConduccionRapida=Si
+		 ( 0.1 0.9 )));	%  ClimatologiaAdversa=No  ConduccionRapida=No
+    }
+
+    potential (Heridas | Airbag Accidente CinturonSeguridad)
+    {
+	data = (((( 0.6 0.3 0.1 )	%  Airbag=SaltaAirbag  Accidente=Si  CinturonSeguridad=Si
+		  ( 0.2 0.45 0.35 ))	%  Airbag=SaltaAirbag  Accidente=Si  CinturonSeguridad=No
+		 (( 0.99 0.009 0.001 )	%  Airbag=SaltaAirbag  Accidente=No  CinturonSeguridad=Si
+		  ( 0.9 0.07 0.03 )))	%  Airbag=SaltaAirbag  Accidente=No  CinturonSeguridad=No
+		((( 0.3 0.5 0.2 )	%  Airbag=NoSaltaAirbag  Accidente=Si  CinturonSeguridad=Si
+		  ( 0.1 0.3 0.6 ))	%  Airbag=NoSaltaAirbag  Accidente=Si  CinturonSeguridad=No
+		 (( 0.99 0.009 0.001 )	%  Airbag=NoSaltaAirbag  Accidente=No  CinturonSeguridad=Si
+		  ( 0.99 0.009 0.001 ))));	%  Airbag=NoSaltaAirbag  Accidente=No  CinturonSeguridad=No
+    }
+} % class Ejercicio1_b

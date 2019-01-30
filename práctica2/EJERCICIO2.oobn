@@ -1,0 +1,630 @@
+class EJERCICIO2
+{
+    inputs = ();
+    outputs = ();
+    node_size = (80 40);
+    HR_TextLabel_IDs = "1,2,3,4,5";
+    HR_TextLabel_5_Size = "100,50";
+    HR_TextLabel_5_Position = "35,733";
+    HR_TextLabel_5_Description = "Activos";
+    HR_TextLabel_4_Size = "100,50";
+    HR_TextLabel_4_Position = "23,473";
+    HR_TextLabel_4_Description = "Amenazas";
+    HR_TextLabel_3_Size = "100,50";
+    HR_TextLabel_3_Position = "32,290";
+    HR_TextLabel_3_Description = "Disparadores";
+    HR_TextLabel_2_Size = "100,50";
+    HR_TextLabel_2_Position = "1091,664";
+    HR_TextLabel_2_Description = "Salvaguardas\nMitigadoras";
+    HR_TextLabel_1_Size = "100,50";
+    HR_TextLabel_1_Position = "851,102";
+    HR_TextLabel_1_Description = "Salvaguardas\nPreventivas";
+    HR_DBN_Num_Slices = "5";
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Utility_Link = "63";
+    HR_Probabilistic_Link = "63";
+    HR_Functional_Link = "63";
+    HR_Binding_Link = "63";
+    HR_Information_Arc = "63";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_DiscreteFunction = "5";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Dialog,name=Dialog,style=bold,size=12]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node SistemaAntiIncendios
+    {
+	label = "";
+	position = (795 573);
+	states = ("SI" "NO");
+	HR_LinkGroup = "[DatosBancario:0][DatosPrestamos:0][ServicioPrestamo:0][ServicioBancario:0]";
+	HR_LinkMode = "[DatosBancario:0][DatosPrestamos:0][ServicioPrestamo:0][ServicioBancario:0]";
+	HR_NodeSize = "(154, 44)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node CopiaSeguridadExterna
+    {
+	label = "";
+	position = (998 573);
+	states = ("SI" "NO");
+	HR_LinkGroup = "[DatosBancario:0][DatosPrestamos:0][ServicioPrestamo:0][ServicioBancario:0]";
+	HR_LinkMode = "[DatosBancario:0][DatosPrestamos:0][ServicioPrestamo:0][ServicioBancario:0]";
+	HR_NodeSize = "(215, 45)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Firewall
+    {
+	label = "";
+	position = (281 113);
+	states = ("SI" "NO");
+	HR_LinkGroup = "[AtaqueDDoS:0]";
+	HR_LinkMode = "[AtaqueDDoS:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node AvisoFalloElectrio
+    {
+	label = "";
+	position = (483 113);
+	states = ("SI" "NO");
+	HR_LinkGroup = "[FalloElectrico:0]";
+	HR_LinkMode = "[FalloElectrico:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_NodeSize = "(132, 53)";
+    }
+
+    node AvisoRefrigeracion
+    {
+	label = "";
+	position = (702 124);
+	states = ("SI" "NO");
+	HR_LinkGroup = "[FalloDiscoDuro:0]";
+	HR_LinkMode = "[FalloDiscoDuro:0]";
+	HR_NodeSize = "(158, 50)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node SistemaRAID
+    {
+	label = "";
+	position = (1216 579);
+	states = ("SI" "NO");
+	HR_LinkControlPoints = "";
+	HR_NodeSize = "(148, 39)";
+	HR_LinkGroup = "[DatosBancario:0][DatosPrestamos:0][ServicioPrestamo:0][ServicioBancario:0]";
+	HR_LinkMode = "[DatosBancario:0][DatosPrestamos:0][ServicioPrestamo:0][ServicioBancario:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node FalloDiscoDuro
+    {
+	label = "";
+	position = (661 313);
+	states = ("SI" "NO");
+	HR_LinkGroup = "[DestruccionInformacion:0]";
+	HR_LinkMode = "[DestruccionInformacion:0]";
+	HR_NodeSize = "(129, 59)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node FalloElectrico
+    {
+	label = "";
+	position = (475 310);
+	states = ("SI" "NO");
+	HR_LinkGroup = "[Incendio:0][DestruccionInformacion:0]";
+	HR_LinkMode = "[Incendio:0][DestruccionInformacion:0]";
+	HR_NodeSize = "(135, 52)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node AtaqueDDoS
+    {
+	label = "";
+	position = (299 311);
+	states = ("SI" "NO");
+	HR_LinkGroup = "[Hackeo:0]";
+	HR_LinkMode = "[Hackeo:0]";
+	HR_NodeSize = "(132, 47)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node DestruccionInformacion
+    {
+	label = "";
+	position = (621 497);
+	states = ("SI" "NO");
+	HR_LinkGroup = "[DatosBancario:0][DatosPrestamos:0][ServicioPrestamo:0][ServicioBancario:0]";
+	HR_LinkMode = "[DatosBancario:0][DatosPrestamos:0][ServicioPrestamo:0][ServicioBancario:0]";
+	HR_NodeSize = "(147, 51)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Incendio
+    {
+	label = "";
+	position = (446 496);
+	states = ("SI" "NO");
+	HR_LinkGroup = "[DatosBancario:0][DatosPrestamos:0][ServicioPrestamo:0][ServicioBancario:0]";
+	HR_LinkMode = "[DatosBancario:0][DatosPrestamos:0][ServicioPrestamo:0][ServicioBancario:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Hackeo
+    {
+	label = "";
+	position = (294 497);
+	states = ("SI" "NO");
+	HR_LinkGroup = "[DatosBancario:0][DatosPrestamos:0][ServicioPrestamo:0][ServicioBancario:0]";
+	HR_LinkMode = "[DatosBancario:0][DatosPrestamos:0][ServicioPrestamo:0][ServicioBancario:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node DatosPrestamos
+    {
+	label = "";
+	position = (503 761);
+	states = ("Disponible" "NoDisponibe");
+	HR_LinkMode = "";
+	HR_LinkGroup = "";
+	HR_NodeSize = "(139, 45)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node DatosBancario
+    {
+	label = "";
+	position = (357 760);
+	states = ("Disponible" "NoDisponible");
+	HR_LinkMode = "";
+	HR_LinkGroup = "";
+	HR_NodeSize = "(124, 43)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node ServicioPrestamo
+    {
+	label = "";
+	position = (648 764);
+	states = ("Disponible" "NoDisponible");
+	HR_LinkMode = "";
+	HR_LinkGroup = "";
+	HR_NodeSize = "(120, 47)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node ServicioBancario
+    {
+	label = "";
+	position = (809 764);
+	states = ("Disponible" "NoDisponible");
+	HR_LinkMode = "";
+	HR_LinkGroup = "";
+	HR_NodeSize = "(166, 43)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    potential (SistemaAntiIncendios)
+    {
+	data = ( 0.9 0.1 );
+    }
+
+    potential (CopiaSeguridadExterna)
+    {
+	data = ( 0.9 0.1 );
+    }
+
+    potential (Firewall)
+    {
+	data = ( 0.95 0.05 );
+    }
+
+    potential (AvisoFalloElectrio)
+    {
+	data = ( 0.2 0.8 );
+    }
+
+    potential (AvisoRefrigeracion)
+    {
+	data = ( 0.3 0.7 );
+    }
+
+    potential (SistemaRAID)
+    {
+	data = ( 0.9 0.1 );
+    }
+
+    potential (FalloDiscoDuro | AvisoRefrigeracion)
+    {
+	data = (( 0.4 0.6 )	%  AvisoRefrigeracion=SI
+		( 0.1 0.9 ));	%  AvisoRefrigeracion=NO
+    }
+
+    potential (FalloElectrico | AvisoFalloElectrio)
+    {
+	data = (( 0.9 0.1 )	%  AvisoFalloElectrio=SI
+		( 0.15 0.85 ));	%  AvisoFalloElectrio=NO
+    }
+
+    potential (AtaqueDDoS | Firewall)
+    {
+	data = (( 0.1 0.9 )	%  Firewall=SI
+		( 0.3 0.7 ));	%  Firewall=NO
+    }
+
+    potential (DestruccionInformacion | FalloElectrico FalloDiscoDuro)
+    {
+	data = ((( 0.99 0.01 )	%  FalloElectrico=SI  FalloDiscoDuro=SI
+		 ( 0.3 0.7 ))	%  FalloElectrico=SI  FalloDiscoDuro=NO
+		(( 0.3 0.7 )	%  FalloElectrico=NO  FalloDiscoDuro=SI
+		 ( 0.05 0.95 )));	%  FalloElectrico=NO  FalloDiscoDuro=NO
+    }
+
+    potential (Incendio | FalloElectrico)
+    {
+	data = (( 1 1 )	%  FalloElectrico=SI
+		( 1 1 ));	%  FalloElectrico=NO
+    }
+
+    potential (Hackeo | AtaqueDDoS)
+    {
+	data = (( 0.99 0.01 )	%  AtaqueDDoS=SI
+		( 0.15 0.85 ));	%  AtaqueDDoS=NO
+    }
+
+    potential (DatosPrestamos | CopiaSeguridadExterna SistemaAntiIncendios SistemaRAID DestruccionInformacion Incendio Hackeo)
+    {
+	data = ((((((( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 1 1 ))))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		  (((( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		 ((((( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 1 1 ))))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		  (((( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 1 1 ))))))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		(((((( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 1 1 ))))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		  (((( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		 ((((( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 1 1 ))))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		  (((( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))))));	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+    }
+
+    potential (DatosBancario | CopiaSeguridadExterna SistemaAntiIncendios SistemaRAID DestruccionInformacion Incendio Hackeo)
+    {
+	data = ((((((( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 1 1 ))))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		  (((( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		 ((((( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 1 1 ))))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		  (((( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 1 1 ))))))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		(((((( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 1 1 ))))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		  (((( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		 ((((( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 1 1 ))))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		  (((( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1 1 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 1 1 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 1 1 )))))));	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+    }
+
+    potential (ServicioPrestamo | CopiaSeguridadExterna SistemaAntiIncendios SistemaRAID DestruccionInformacion Incendio Hackeo)
+    {
+	data = ((((((( 1E-005 0.99999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 0.0001 0.9999 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 0.0001 0.9999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 0.001 0.999 )))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 0.001 0.999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 0.001 0.999 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 0.01 0.99 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 0.99 0.01 ))))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		  (((( 1E-005 0.99999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 0.0001 0.9999 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 0.0001 0.9999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 0.001 0.999 )))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 0.0001 0.9999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 0.001 0.999 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 0.09 0.91 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 0.97 0.03 )))))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		 ((((( 1E-005 0.99999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 0.0001 0.9999 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 0.0001 0.9999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 0.001 0.999 )))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 0.0001 0.9999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 0.001 0.999 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 0.03 0.97 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 0.97 0.03 ))))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		  (((( 1E-005 0.99999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 0.0001 0.9999 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 0.0001 0.9999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 0.001 0.999 )))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 0.0001 0.9999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 0.001 0.999 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 0.01 0.99 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 0.95 0.05 ))))))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		(((((( 1E-005 0.99999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 0.0001 0.9999 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 0.001 0.999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 0.001 0.999 )))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 0.0001 0.9999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 0.001 0.999 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 0.001 0.999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 0.98 0.02 ))))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		  (((( 1E-005 0.99999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 0.0001 0.9999 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 0.0001 0.9999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 0.001 0.999 )))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 0.0001 0.9999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 0.001 0.999 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 0.001 0.999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 0.98 0.02 )))))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		 ((((( 0.0001 0.9999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 0.0001 0.9999 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 0.001 0.999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 0.01 0.99 )))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 0.0001 0.9999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 0.001 0.999 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 0.01 0.99 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 0.98 0.02 ))))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		  (((( 1E-006 0.999999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1E-006 0.999999 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1E-006 0.999999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1E-006 0.999999 )))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1E-006 0.999999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1E-006 0.999999 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 0.0001 0.9999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 0.97 0.03 )))))));	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+    }
+
+    potential (ServicioBancario | CopiaSeguridadExterna SistemaAntiIncendios SistemaRAID DestruccionInformacion Incendio Hackeo)
+    {
+	data = ((((((( 1E-005 0.99999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 0.0001 0.9999 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1E-006 0.999999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 0.001 0.999 )))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 0.0001 0.9999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 0.01 0.99 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 0.01 0.99 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 0.99 0.01 ))))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		  (((( 1E-005 0.99999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 0.0001 0.9999 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1E-006 0.999999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 0.001 0.999 )))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 0.0001 0.9999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 0.01 0.99 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 0.01 0.99 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 0.99 0.01 )))))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		 ((((( 1E-005 0.99999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1E-005 0.99999 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 0.001 0.999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 0.001 0.999 )))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1E-005 0.99999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 5E-005 0.99995 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 0.001 0.999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 0.95 0.05 ))))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		  (((( 1E-005 0.99999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 0.001 0.999 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1E-005 0.99999 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1E-006 0.999999 )))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 0.0009 0.0001 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 0.001 0.009 ))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 0.01 0.99 )	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 0.98 0.02 ))))))	%  CopiaSeguridadExterna=SI  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		(((((( 1E-005 0.99999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 0.0001 0.9999 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 0.0001 0.9999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1E-007 1 )))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 0.001 0.999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 0.01 0.99 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 0.001 0.999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 0.97 0.03 ))))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		  (((( 1E-005 0.99999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 0.0001 0.9999 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 0.0001 0.9999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 0.001 0.999 )))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 0.0001 0.9999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 0.006 0.004 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 0.03 0.97 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 0.96 0.04 )))))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=SI  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		 ((((( 1E-006 0.999999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1E-006 0.999999 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1E-006 0.999999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1E-006 0.999999 )))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1E-006 0.999999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 0.001 0.999 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 0.01 0.99 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 0.98 0.02 ))))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=SI  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+		  (((( 1E-006 0.999999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=SI
+		     ( 1E-006 0.999999 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=SI  Hackeo=NO
+		    (( 1E-006 0.999999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=SI
+		     ( 1E-006 0.999999 )))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=SI  Incendio=NO  Hackeo=NO
+		   ((( 1E-006 0.999999 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=SI
+		     ( 1E-006 0.999999 ))	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=SI  Hackeo=NO
+		    (( 0.1 0.9 )	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=SI
+		     ( 0.95 0.05 )))))));	%  CopiaSeguridadExterna=NO  SistemaAntiIncendios=NO  SistemaRAID=NO  DestruccionInformacion=NO  Incendio=NO  Hackeo=NO
+    }
+} % class EJERCICIO2
