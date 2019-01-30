@@ -2,5 +2,5 @@
 
 Contenido de desarrollo de la asignatura Fiabilidad y Gestion de Riesgos
 
-Uso de software Pilar.
+Uso de software Pilar y Hugin.
 
